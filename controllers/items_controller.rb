@@ -11,9 +11,10 @@ require_relative("../models/vendor.rb")
 get "/items" do
   @items = Item.all()
   @total = Item.total_spend()
+  @categories = Category.all()
   erb(:index)
 end
-
+#
 # get "/budget_breakdown" do
 # @total = Item.total_spend()
 # erb(:index)

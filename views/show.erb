@@ -1,9 +1,9 @@
 <h2><%= @item.name %></h2>
 
-<p>Name: <%= @item.name() %></p>
+<p>Name: <%= @item.name().capitalize%></p>
 <p>Cost: <%= @item.cost %></p>
-<p>Vendor: <%= @item.vendor_id%></p>
-<p>Category: <%= @item.category_id%></p>
+<p>Vendor: <%= @item.find_vendor().vendor_name()%></p>
+<p>Category: <%= @item.find_category().category_name()%></p>
 
 <form action="/items/<%= @item.id %>/edit" method= "POST"><input type="submit" value="Edit"></form>
 <form action="/items/<%= @item.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

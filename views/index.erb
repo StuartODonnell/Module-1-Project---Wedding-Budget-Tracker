@@ -4,10 +4,20 @@
 
 
 <% @items.each do |item| %>
-  <p>Name: <%= item.name() %></p>
+  <p>Name: <%= item.name().capitalize %></p>
   <p>Cost: <%= item.cost %></p>
   <p>Vendor: <%= item.find_vendor().vendor_name()%></p>
   <p>Category: <%= item.find_category().category_name()%></p>
   <p><a href="/items/<%= item.id%>">Show Item</a></p>
   <hr/>
+<% end %>
+<hr/>
+
+
+<% @categories.each do |category| %>
+  <p><%=category.name%>: £<%=Item.total_spend_by_category(category.id)%></p>
+
+
+  <hr/>
+
 <% end %>

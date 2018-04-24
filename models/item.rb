@@ -77,7 +77,23 @@ class Item
       return total
     end
 
-
+    # Category.total_spend_by_category(category1.id)
+    def self.total_spend_by_category(category_id)
+      # get all the items with the same category id
+      sql = "SELECT * FROM items WHERE items.category_id = $1"
+      #values variable denotes sanitisation of code
+      values = [category_id]
+      total_hash = SqlRunner.run(sql, values)
+      result = total_hash.map{|item| Item.new(item)}
+      # result is an array of Items
+      total = 0
+      for costs in result
+        total += costs.cost
+      end
+      return total
+      # total up the cost of each item
+      # return total
+    end
 
 
 

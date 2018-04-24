@@ -82,61 +82,61 @@ vendor10.save()
 
 category1 = Category.new({
 
-    "name" => "flowers"
+    "name" => "Flowers"
 
     })
 
 category2 = Category.new({
 
-    "name" => "food"
+    "name" => "Food"
 
     })
 
 category3 = Category.new({
 
-    "name" => "jewellery"
+    "name" => "Jewellery"
 
     })
 
 category4 = Category.new({
 
-    "name" => "entertainment"
+    "name" => "Entertainment"
 
     })
 
 category5 = Category.new({
 
-    "name" => "decoration"
+    "name" => "Decoration"
 
     })
 
 category6 = Category.new({
 
-    "name" => "food"
+    "name" => "Venue"
 
     })
 
 category7 = Category.new({
 
-    "name" => "gifts"
+    "name" => "Gifts"
 
     })
 
 category8 = Category.new({
 
-    "name" => "outfits"
+    "name" => "Outfits"
 
     })
 
 category9 = Category.new({
 
-    "name" => "transport"
+    "name" => "Transport"
 
     })
 
 category10 = Category.new({
 
-    "name" => "other"
+    "name" => "Other"
 
     })
 
