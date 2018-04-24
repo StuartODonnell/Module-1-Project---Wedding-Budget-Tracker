@@ -13,7 +13,6 @@ vendor1 = Vendor.new({
 
     })
 
-
 vendor2 = Vendor.new({
 
     "name" => "Meals-R-Us"
@@ -25,9 +24,61 @@ vendor3 = Vendor.new({
     "name" => "Rings-R-Us"
 
     })
+
+vendor4 = Vendor.new({
+
+    "name" => "Bands-R-Us"
+
+    })
+
+vendor5 = Vendor.new({
+
+    "name" => "Balloons-R-Us"
+
+    })
+
+vendor6 = Vendor.new({
+
+    "name" => "Favours-R-Us"
+
+    })
+
+vendor7 = Vendor.new({
+
+    "name" => "Buses-R-Us"
+
+    })
+
+vendor8 = Vendor.new({
+
+    "name" => "Cakes-R-Us"
+
+    })
+
+vendor9 = Vendor.new({
+
+    "name" => "Outfits-R-Us"
+
+    })
+
+vendor10 = Vendor.new({
+
+    "name" => "Other"
+
+    })
+
+
 vendor1.save()
 vendor2.save()
 vendor3.save()
+vendor4.save()
+vendor5.save()
+vendor6.save()
+vendor7.save()
+vendor8.save()
+vendor9.save()
+vendor10.save()
+
 
 category1 = Category.new({
 
@@ -46,9 +97,59 @@ category3 = Category.new({
     "name" => "jewellery"
 
     })
+
+category4 = Category.new({
+
+    "name" => "entertainment"
+
+    })
+
+category5 = Category.new({
+
+    "name" => "decoration"
+
+    })
+
+category6 = Category.new({
+
+    "name" => "food"
+
+    })
+
+category7 = Category.new({
+
+    "name" => "gifts"
+
+    })
+
+category8 = Category.new({
+
+    "name" => "outfits"
+
+    })
+
+category9 = Category.new({
+
+    "name" => "transport"
+
+    })
+
+category10 = Category.new({
+
+    "name" => "other"
+
+    })
+
 category1.save()
 category2.save()
 category3.save()
+category4.save()
+category5.save()
+category6.save()
+category7.save()
+category8.save()
+category9.save()
+category10.save()
 
 item1 = Item.new({
 

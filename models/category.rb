@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Category
 
-attr_reader :id 
+attr_reader :id
 attr_accessor :name
 
 def initialize( options )
@@ -60,7 +60,7 @@ def save()
 
     def self.all()
         sql = "SELECT * FROM categories"
-        items = SqlRunner.run( sql )
+        categories = SqlRunner.run( sql )
         result = categories.map { |category| Category.new( category ) }
         return result
       end
@@ -73,13 +73,13 @@ def save()
     return result
   end
 
-  def find_item( )
-    sql = "SELECT * FROM categories WHERE item_id = $1"
-    values = [@item]
-    category = SqlRunner.run( sql, values )
-    result = Category.new( category.first )
-    return result
-  end
+  # def find_item( )
+  #   sql = "SELECT * FROM categories WHERE item_id = $1"
+  #   values = [@item]
+  #   category = SqlRunner.run( sql, values )
+  #   result = Category.new( category.first )
+  #   return result
+  # end
 
 
 end

@@ -50,7 +50,7 @@ attr_reader :id
 
     def self.all()
         sql = "SELECT * FROM vendors"
-        items = SqlRunner.run( sql )
+        vendors = SqlRunner.run( sql )
         result = vendors.map { |vendor| Vendor.new( vendor ) }
         return result
       end

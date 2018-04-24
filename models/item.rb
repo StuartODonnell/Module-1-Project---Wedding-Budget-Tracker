@@ -82,9 +82,15 @@ class Item
       return item
     end
 
-    # def vendor()
-    #   vendor = Vendor.find(@vendor_id)
-    #   return house
+    # def find_vendor()
+    # sql = "SELECT vendors.* FROM vendors INNER JOIN items ON vendors.id = items.vendor_id WHERE items.id = $1;"
+    # values = [id]
+    # result = SqlRunner.run()
+    # # values = Vendor.find(@vendor_id)
+    # # return house
     # end
-
+    #
+    # def find_category = "SELECT categories.* FROM categories INNER JOIN items ON categories.id = items.category_id WHERE items.id = $1;"
+    #
+    # end
   end

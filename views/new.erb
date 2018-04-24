@@ -1,0 +1,39 @@
+<h2>Add Item</h2>
+<form method="POST" action="/items">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="first_name">Item:</label>
+      <input type="text" name="name" id="name"/>
+    </div>
+
+    <div class="form-el">
+      <label for="cost">Cost:</label>
+      <input type="number" name="cost" id="cost"/>
+    </div>
+
+    <div class="form-el">
+      <label for="category_select">Select Category:</label>
+      <select name="category_id" id="category_select">
+        <% @categories.each do |category| %>
+            <option value=<%= category.id %>><%= category.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <label for="vendor">Select Vendor:</label>
+      <select name="vendor_id" id="vendor_select">
+        <% @vendors.each do |vendor| %>
+        <option value=<%= vendor.id %>><%= vendor.name.capitalize %></option>
+        <%end%>
+      </select>
+    </div>
+
+
+    <div class="form-el">
+      <input type="submit" value="Save Item"/>
+    </div>
+
+  </div>
+</form>

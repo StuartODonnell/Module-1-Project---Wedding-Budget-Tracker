@@ -9,7 +9,13 @@ class ItemSpec < MiniTest::Test
     assert_equal(@name, name)
  end
 
+ def test_find_vendor()
+   
+ end
 
+ def test_find_category
+
+ end
 # def test_save()
 # id = @id
 # name = @name

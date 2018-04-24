@@ -13,23 +13,25 @@ get "/items" do
   erb(:index)
 end
 
-# # new
-# get "/items/new" do
-#   erb(:new)
-# end
-# #
-# # show - i.e. an individual item
-get "/items/:id" do
-  @items = Item.find(params[:id] )
-  erb(:show)
+# new
+get "/items/new" do
+@categories = Category.all()
+@vendors = Vendor.all()
+  erb(:new)
 end
 #
-# # create
-# post "/items" do
-#   item = Item.new(params)
-#   item.save()
-#   redirect to "/items"
-# end
+# show - i.e. an individual item
+get "/items/:id" do
+  @item = Item.find(params[:id] )
+  erb(:show)
+end
+
+# create
+post "/items" do
+  item = Item.new(params)
+  item.save()
+  redirect to "/items"
+end
 # #
 # # # edit
 # get "/sitems/:id/edit" do

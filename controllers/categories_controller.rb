@@ -11,7 +11,7 @@ get "/items" do
   @items = Item.all()
   erb(:index)
 end
-#
+
 # # new
 # get "/students/new" do
 #   erb(:new)
