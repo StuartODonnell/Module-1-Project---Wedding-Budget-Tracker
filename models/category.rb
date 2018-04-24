@@ -63,7 +63,7 @@ def save()
         categories = SqlRunner.run( sql )
         result = categories.map { |category| Category.new( category ) }
         return result
-      end
+    end
 
     def self.find( id )
     sql = "SELECT * FROM categories WHERE category_id = $1"

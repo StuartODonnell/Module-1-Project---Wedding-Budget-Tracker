@@ -62,6 +62,25 @@ class Item
       return result
     end
 
+    # def total_spend()
+    #   sql = "SELECT * FROM items"
+    #   items = SqlRunner.run(sql)
+    #   result = items.cost.sum{|item| Item.new (item)}
+    # return result
+
+    def self.total_spend
+      total = 0
+      items = Item.all
+      for item in items
+        total += item.cost
+      end
+      return total
+    end
+
+
+
+
+
     # def self.all()
     #   sql = "SELECT * FROM items"
     #   item_data = SqlRunner.run(sql)
@@ -82,13 +101,15 @@ class Item
       return item
     end
 
-    # def find_vendor()
-    # sql = "SELECT vendors.* FROM vendors INNER JOIN items ON vendors.id = items.vendor_id WHERE items.id = $1;"
-    # values = [id]
-    # result = SqlRunner.run()
-    # # values = Vendor.find(@vendor_id)
-    # # return house
-    # end
+    def find_vendor()
+    sql = "SELECT vendors.* FROM vendors INNER JOIN items ON vendors.id = items.vendor_id WHERE items.id = $1;"
+    values = [@id]
+    hash = SqlRunner.run(sql)
+    result = hash.map{|vendor| Vendor.new(vendor)}
+    return result.first
+    # values = Vendor.find(@vendor_id)
+    # return house
+    end
     #
     # def find_category = "SELECT categories.* FROM categories INNER JOIN items ON categories.id = items.category_id WHERE items.id = $1;"
     #

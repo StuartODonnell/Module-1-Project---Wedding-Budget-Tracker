@@ -7,10 +7,10 @@ require_relative("../models/vendor.rb")
 
 
 # the index
-get "/items" do
-  @items = Item.all()
-  erb(:index)
-end
+# get "/items" do
+#   @items = Item.all()
+#   erb(:index)
+# end
 
 # # new
 # get "/students/new" do

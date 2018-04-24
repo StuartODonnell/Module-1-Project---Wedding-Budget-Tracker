@@ -10,7 +10,13 @@ require_relative("../models/vendor.rb")
 # the index
 get "/items" do
   @items = Item.all()
+  @total = Item.total_spend()
   erb(:index)
+end
+
+get "/budget_breakdown" do
+@total = Item.total_spend()
+erb(:index)
 end
 
 # new
