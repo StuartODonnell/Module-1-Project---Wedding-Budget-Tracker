@@ -73,9 +73,18 @@ class Item
     #     return item_data.map { |item| Item.new(item) }
     #   end
 
-    def vendor()
-      vendor = Vendor.find(@vendor_id)
-      return house
+    def self.find(id)
+      sql = "SELECT * FROM items
+      WHERE id = $1"
+      values = [id]
+      result = SqlRunner.run(sql ,values).first
+      item = Item.new(result)
+      return item
     end
+
+    # def vendor()
+    #   vendor = Vendor.find(@vendor_id)
+    #   return house
+    # end
 
   end

@@ -18,11 +18,11 @@ end
 #   erb(:new)
 # end
 # #
-# # # show - i.e. an individual item
-# get "/items/:id" do
-#   @items = Item.find(params[:id] )
-#   erb(:show)
-# end
+# # show - i.e. an individual item
+get "/items/:id" do
+  @items = Item.find(params[:id] )
+  erb(:show)
+end
 #
 # # create
 # post "/items" do
