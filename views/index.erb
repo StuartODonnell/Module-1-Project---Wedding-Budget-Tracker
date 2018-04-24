@@ -1,0 +1,8 @@
+<% @items.each do |item| %>
+  <p>Name: <%= item.name() %></p>
+  <p>Cost: <%= item.cost %></p>
+  <p>Vendor: <%= item.vendor_id%></p>
+  <p>Category: <%= item.category_id%></p>
+  <p><a href="/items/<%= item.id%>">Show Item</a></p>
+  <hr/>
+<% end %>

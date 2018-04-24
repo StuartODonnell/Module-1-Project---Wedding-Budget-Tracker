@@ -2,7 +2,8 @@ require_relative( '../db/sql_runner' )
 
 class Category
 
-attr_reader :name, :id
+attr_reader :id 
+attr_accessor :name
 
 def initialize( options )
 
@@ -35,5 +36,50 @@ def save()
     sql = "DELETE FROM categories"
     SqlRunner.run( sql )
   end
+
+  def update()
+    sql = "UPDATE categories
+    SET
+    (
+      name
+      ) =
+      (
+        $1
+      )
+      WHERE id = $2"
+      values = [@name]
+      SqlRunner.run( sql, values )
+    end
+
+    def delete()
+      sql = "DELETE FROM categories
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run( sql, values )
+    end
+
+    def self.all()
+        sql = "SELECT * FROM categories"
+        items = SqlRunner.run( sql )
+        result = categories.map { |category| Category.new( category ) }
+        return result
+      end
+
+    def self.find( id )
+    sql = "SELECT * FROM categories WHERE category_id = $1"
+    values = [id]
+    category = SqlRunner.run( sql, values )
+    result = Category.new( category.first )
+    return result
+  end
+
+  def find_item( )
+    sql = "SELECT * FROM categories WHERE item_id = $1"
+    values = [@item]
+    category = SqlRunner.run( sql, values )
+    result = Category.new( category.first )
+    return result
+  end
+
 
 end
