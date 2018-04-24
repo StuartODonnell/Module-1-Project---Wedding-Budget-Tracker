@@ -1,7 +1,7 @@
-<h2><%= @item.name %></h2>
+<h2><%= @item.name.capitalize %></h2>
 
 <p>Name: <%= @item.name().capitalize%></p>
-<p>Cost: <%= @item.cost %></p>
+<p>Cost: £<%= @item.cost %></p>
 <p>Vendor: <%= @item.find_vendor().vendor_name()%></p>
 <p>Category: <%= @item.find_category().category_name()%></p>
 

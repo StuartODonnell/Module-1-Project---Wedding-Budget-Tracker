@@ -14,11 +14,12 @@ get "/items" do
   @categories = Category.all()
   erb(:index)
 end
-#
-# get "/budget_breakdown" do
-# @total = Item.total_spend()
-# erb(:index)
-# end
+
+get "/items/budget_breakdown" do
+@total = Item.total_spend()
+@categories = Item.total_spend_by_category()
+erb(:index)
+end
 
 # new
 get "/items/new" do

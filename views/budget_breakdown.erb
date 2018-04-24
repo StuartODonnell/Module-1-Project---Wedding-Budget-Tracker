@@ -1,15 +1,9 @@
+
+
 <% @categories.each do |category| %>
   <p><%=category.name%>: £<%=Item.total_spend_by_category(category.id)%></p>
-  <!-- <p>Food: £<%= item.name().capitalize %></p>
-  <p>Jewellery: £<%= item.name().capitalize %></p>
-  <p>Entertainment: £<%= item.name().capitalize %></p>
-  <p>Decoration: £<%= item.name().capitalize %></p>
-  <p>Venue: £<%= item.name().capitalize %></p>
-  <p>Gifts: £<%= item.name().capitalize %></p>
-  <p>Outfits: £<%= item.name().capitalize %></p>
-  <p>Transport: £<%= item.name().capitalize %></p>
-  <p>Other: £<%= item.name().capitalize %></p> -->
 
-  <p><a href="/items/<%= item.id%>">Show Item</a></p>
+
+
   <hr/>
 <% end %>
