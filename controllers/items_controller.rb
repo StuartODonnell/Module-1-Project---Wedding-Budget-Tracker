@@ -14,10 +14,10 @@ get "/items" do
   erb(:index)
 end
 
-get "/budget_breakdown" do
-@total = Item.total_spend()
-erb(:index)
-end
+# get "/budget_breakdown" do
+# @total = Item.total_spend()
+# erb(:index)
+# end
 
 # new
 get "/items/new" do
@@ -40,7 +40,7 @@ post "/items" do
 end
 # #
 # # # edit
-# get "/sitems/:id/edit" do
+# get "/items/:id/edit" do
 # @itemss = Item.find(params[:id])
 # erb(:edit)
 # end

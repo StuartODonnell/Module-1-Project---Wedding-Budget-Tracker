@@ -5,5 +5,5 @@
 <p>Vendor: <%= @item.vendor_id%></p>
 <p>Category: <%= @item.category_id%></p>
 
-<a href="/items/<%= @item.id %>/edit">Edit</a>
+<form action="/items/<%= @item.id %>/edit" method= "POST"><input type="submit" value="Edit"></form>
 <form action="/items/<%= @item.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

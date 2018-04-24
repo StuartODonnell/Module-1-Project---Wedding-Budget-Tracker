@@ -104,14 +104,19 @@ class Item
     def find_vendor()
     sql = "SELECT vendors.* FROM vendors INNER JOIN items ON vendors.id = items.vendor_id WHERE items.id = $1;"
     values = [@id]
-    hash = SqlRunner.run(sql)
-    result = hash.map{|vendor| Vendor.new(vendor)}
+    vendor_hash = SqlRunner.run(sql,values)
+    result = vendor_hash.map{|vendor| Vendor.new(vendor)}
     return result.first
     # values = Vendor.find(@vendor_id)
     # return house
     end
-    #
-    # def find_category = "SELECT categories.* FROM categories INNER JOIN items ON categories.id = items.category_id WHERE items.id = $1;"
-    #
+
+    # def find_category()
+    # sql = "SELECT categories.* FROM categories INNER JOIN items ON categories.id = items.category_id WHERE items.id = $1;"
+    # values = [@id]
+    # category_hash = SqlRunner.run(sql)
+    # result = category_hash.map{|category| Category.new(category)}
+    # return result.first
     # end
+
   end
