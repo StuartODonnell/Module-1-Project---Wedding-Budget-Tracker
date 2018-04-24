@@ -17,7 +17,7 @@ end
 
 get "/items/budget-breakdown" do
 @total = Item.total_spend()
-@categories = Category.all()
+@categories = Item.total_spend_by_category()
 erb(:index)
 end
 
