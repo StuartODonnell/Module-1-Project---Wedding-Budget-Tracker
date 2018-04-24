@@ -15,9 +15,9 @@ get "/items" do
   erb(:index)
 end
 
-get "/items/budget_breakdown" do
+get "/items/budget-breakdown" do
 @total = Item.total_spend()
-@categories = Item.total_spend_by_category()
+@categories = Category.all()
 erb(:index)
 end
 
