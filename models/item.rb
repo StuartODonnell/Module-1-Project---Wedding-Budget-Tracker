@@ -111,12 +111,12 @@ class Item
     # return house
     end
 
-    # def find_category()
-    # sql = "SELECT categories.* FROM categories INNER JOIN items ON categories.id = items.category_id WHERE items.id = $1;"
-    # values = [@id]
-    # category_hash = SqlRunner.run(sql)
-    # result = category_hash.map{|category| Category.new(category)}
-    # return result.first
-    # end
+    def find_category()
+    sql = "SELECT categories.* FROM categories INNER JOIN items ON categories.id = items.category_id WHERE items.id = $1;"
+    values = [@id]
+    category_hash = SqlRunner.run(sql,values)
+    result = category_hash.map{|category| Category.new(category)}
+    return result.first
+    end
 
   end
