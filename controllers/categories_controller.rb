@@ -1,9 +1,9 @@
-require( 'sinatra' )
-require( 'sinatra/contrib/all' )
-require( 'pry-byebug' )
-
-require_relative("../models/item.rb")
-require_relative("../models/vendor.rb")
+# require( 'sinatra' )
+# require( 'sinatra/contrib/all' )
+# require( 'pry-byebug' )
+#
+# require_relative("../models/item.rb")
+# require_relative("../models/vendor.rb")
 
 #
 # the index

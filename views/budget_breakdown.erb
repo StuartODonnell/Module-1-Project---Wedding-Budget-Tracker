@@ -1,7 +1,12 @@
 
-
+<!-- 
 <% @categories.each do |category| %>
   <p><%=category.name%>: £<%=Item.total_spend_by_category(category.id)%></p>
 
+  <hr/>
+<% end %> -->
+
+<% @categories.each do |category| %>
+  <p><%=category.name%>: £<%=Item.total_spend_by_category(category.id)%></p>
   <hr/>
 <% end %>
