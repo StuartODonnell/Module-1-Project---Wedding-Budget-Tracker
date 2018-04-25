@@ -1,7 +1,6 @@
-<!-- <head>
-  <link rel="stylesheet" href="styles/style.css">
-</head> -->
 
+<div class="container-1">
+  <div class="box-1">
 <h2><%= @item.name.capitalize %></h2>
 
 <p>Name: <%= @item.name().capitalize%></p>
@@ -11,3 +10,6 @@
 
 <form action="/items/<%= @item.id %>/edit" method= "POST"><input type="submit" value="Edit"></form>
 <form action="/items/<%= @item.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
+</div>
+</div>

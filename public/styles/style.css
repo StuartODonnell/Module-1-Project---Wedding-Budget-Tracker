@@ -34,6 +34,33 @@ font-size: 40px;
 color: white;
 
 }
+
+h2{
+
+  justify-content: center;
+  text-align: center;
+  font-family: Arial;
+  font-size: 25px;
+  color: lightslategray;
+
+}
+
+h4{
+align: centre;
+  justify-contentt:flex-start;
+  text-align:left;
+  font-family: Arial;
+  font-size: 25px;
+  color: lightslategray;
+
+}
+
+nav{
+align-items: center;
+text-align: center:
+
+}
+
 .container-1{
 
   display: flex;
@@ -43,8 +70,20 @@ color: white;
 
 }
 
-.box-1{
+.container-2{
+
+  display: flex;
+  background-color: ivory;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
+}
+
+.container-3{
+
+  display: flex;
+  background-color: lightslategray;
+  align-items: center;
+  justify-content: space-around;
 
 }

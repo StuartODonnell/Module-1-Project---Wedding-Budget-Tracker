@@ -1,18 +1,22 @@
-<!-- <head>
-  <link rel="stylesheet" href="styles/style.css">
-</head> -->
 
 
-<div class="fixed-size-container">
-  <div class="fixed-size">
+<div class="container-2">
+
+  <div class="box-1">
+<h4>All Items</h4>
+  </div>
+
+  <div class="box-2">
+
     <% @items.each do |item| %>
-      <p>Name: <%= item.name().capitalize %></p>
-      <p>Cost: £<%= item.cost %></p>
-      <p>Vendor: <%= item.find_vendor().vendor_name()%></p>
-      <p>Category: <%= item.find_category().category_name()%></p>
-      <p><a href="/items/<%= item.id%>">Show Item</a></p>
-      <hr/>
+    <p>Name: <%= item.name().capitalize %></p>
+    <p>Cost: £<%= item.cost %></p>
+    <p>Vendor: <%= item.find_vendor().vendor_name()%></p>
+    <p>Category: <%= item.find_category().category_name()%></p>
+    <p><a href="/items/<%= item.id%>">Show Item</a></p>
+    <hr/>
     <% end %>
+
   </div>
 
 </div>
